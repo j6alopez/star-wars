@@ -10,14 +10,7 @@ export const routes: Routes = [
   },
   {
     path: 'starships',
-    component: LayoutPageComponent,
-    children: [
-      {
-        path: ':id',
-        component: StarShipPageComponent,
-      },
-
-    ],
+    loadChildren: () => import ('./starships/starships.routes').then( r => r.STARSHIP_ROUTES)
   },
   {
     path: '',
