@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './home/home-page/home-page.component';
-import { StarshipPageComponent } from './starships/pages/starship-page/starship-page.component';
+import { StarShipPageComponent } from './starships/pages/starship-page/starship-page.component';
+import LayoutPageComponent from './starships/pages/layout-page/layout-page.component';
 
 export const routes: Routes = [
   {
@@ -9,14 +10,14 @@ export const routes: Routes = [
   },
   {
     path: 'starships',
-    loadComponent: () =>
-      import('./starships/pages/layout-page/layout-page.component'),
+    component: LayoutPageComponent,
     children: [
-        {
-            path: ':id', 
-            component: StarshipPageComponent
-        }
-    ]
+      {
+        path: ':id',
+        component: StarShipPageComponent,
+      },
+
+    ],
   },
   {
     path: '',

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './starship-page.component.html',
   styleUrl: './starship-page.component.scss'
 })
-export class StarshipPageComponent {
+export class StarShipPageComponent {
 
 }

@@ -1,20 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StarshipsDTO } from '../interfaces/starships-dto.interface';
+import { Starships } from '../interfaces/starships.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class StarshipsService {
+export class StarWarsInfoService {
 
   constructor( private http: HttpClient) {}
 
   private baseUrl = "https://swapi.dev/api"
 
-  public getStarships(): Observable<StarshipsDTO> {
+  public getStarships(): Observable<Starships> {
     const url = `${this.baseUrl}/starships`
-    return this.http.get<StarshipsDTO>(url);
+    return this.http.get<Starships>(url);
   }
 
 }
