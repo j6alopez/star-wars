@@ -1,0 +1,8 @@
+<ul class="list-group">
+    @for (starship of starships; track $index) {
+    <li class="list-group-item">
+        <h5> {{ starship.model | uppercase }}</h5>
+        <p> {{ starship.name }} </p>
+    </li>
+    }
+</ul>
