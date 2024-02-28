@@ -13,7 +13,7 @@ import { AsyncPipe } from '@angular/common';
     styleUrl: './starship-page.component.scss',
     imports: [StarshipImagePipe, AsyncPipe],
 })
-export class StarShipPageComponent implements OnInit {
+export default class StarShipPageComponent implements OnInit {
     private router = inject(Router);
     private activatedRouter = inject(ActivatedRoute);
     private starwarsInfoService = inject(StarWarsInfoService);
