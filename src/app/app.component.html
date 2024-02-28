@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="row my-3">
 
     <div class="col-7 d-flex justify-content-end">
@@ -12,10 +11,12 @@
     </div>
 
   </div>
-
-  <shared-navigation-bar></shared-navigation-bar>
-
-  <div>
-    <router-outlet></router-outlet>
-  </div>
 </div>
+
+<div class="container-fluid">
+  <shared-navigation-bar></shared-navigation-bar>
+</div>
+
+<section class="container">
+  <router-outlet></router-outlet>
+</section>

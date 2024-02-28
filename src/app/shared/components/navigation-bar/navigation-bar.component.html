@@ -1,8 +1,9 @@
 <div class="row">
-  <ul class="nav col-7 d-flex justify-content-end">
+  <ul class="nav sw-nav col d-flex justify-content-center">
     @for (element of navBarElements; track $index) {
     <li class="nav-item">
-      <a class="nav-link active" routerLinkActive="active" [routerLink]="element.url">{{ element.label }}</a>
+      <a class="nav-link sw-nav-item" routerLinkActive="sw-nav-item-active" [routerLink]="element.url">{{ element.label
+        }}</a>
     </li>
     }
   </ul>

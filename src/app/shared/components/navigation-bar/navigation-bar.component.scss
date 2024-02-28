@@ -1,0 +1,14 @@
+$sw-color : #7c7c7c; 
+.sw-nav {
+    border: 1px solid #1d1d1d;
+    border-right: 0;
+    border-left: 0;
+}
+.sw-nav-item{
+    color: $sw-color;
+    border: 1px solid #1d1d1d;
+}
+.sw-nav-item-active{
+    color: white;
+    border-bottom: 2px solid #226bcc;
+}
