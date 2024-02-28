@@ -7,7 +7,7 @@ import { StarshipImagePipe } from '../../pipes/starship-image.pipe';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-starship-page',
+    selector: 'starship-page',
     standalone: true,
     templateUrl: './starship-page.component.html',
     styleUrl: './starship-page.component.scss',

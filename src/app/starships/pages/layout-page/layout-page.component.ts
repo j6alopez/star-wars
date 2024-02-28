@@ -10,7 +10,7 @@ import { Starship } from '../../interfaces/starship.interface';
 import { map, tap } from 'rxjs';
 
 @Component({
-    selector: 'app-layout-page',
+    selector: 'starship-layout-page',
     standalone: true,
     imports: [ 
         CommonModule, 
@@ -20,45 +20,5 @@ import { map, tap } from 'rxjs';
     templateUrl: './layout-page.component.html',
     styleUrl: './layout-page.component.scss',
 })
-export default class LayoutPageComponent implements OnInit {
-    public starships: Starship[] = [];
-    private currentPage: number = 1;
-    public nextPage!: number | null;
-
-    constructor(private starshipsService: StarWarsInfoService) {}
-
-    ngOnInit(): void {
-        this.addStarShipsToList();
-    }
-
-    getStarShipId(url: string): string {
-        return UrlUtilsService.extractStarShipIdFromSwApi(url);
-    }
-    
-    addStarShipsToList(): void {
-        this.starshipsService.getStarshipsWithPagination(this.currentPage)
-            .pipe(
-                tap(({ next }) => this.setNextPage(next)),
-                map( ({ results }) => { 
-                    return results.map( ({ model, name, url }) => ({model, name, url }) as Starship) // transform emmited values
-                })
-            ) 
-            .subscribe( (data) => {
-                this.starships.push(...data);
-            });
-    }
-
-    private setNextPage( nextPage: string | null): void {
-        const isLastPage = nextPage === null;
-        if (isLastPage) {
-            this.nextPage = nextPage;
-            return;
-        }
-        const next = UrlUtilsService.extractParameterFromUrl( nextPage, 'page');
-        if( next ) {
-            this.currentPage = this.currentPage + 1;
-            this.nextPage = Number.parseInt(next!);
-        }
-    }
-
+export default class LayoutPageComponent {
 }

@@ -1,0 +1,20 @@
+<ul class="my-2">
+    @for (starship of starships; track $index) {
+      <a 
+        class="list-group-item sw-list-item my-3"
+        [routerLink]="['/starships', getStarShipId(starship.url)]"  
+      >
+        <h5 class="p-1 m-1 ms-2"> {{ starship.model | uppercase }}</h5>
+        <p class="p-1 m-1 ms-2"> {{ starship.name }} </p>
+      </a>
+    }
+  </ul>
+  @if( starships.length > 0  && nextPage !== null) {
+    <button
+      class="btn ms-4"
+      (click)="addStarShipsToList()"
+    >
+      View More
+    </button>
+  }
+  
