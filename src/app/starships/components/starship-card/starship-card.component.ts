@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StarWarsImageService } from '../../services/star-wars-image.service';
 import { UrlUtilsService } from '../../../utils/url-utils/url-utils.service';
-import { Starship } from '../../interfaces/starship.interface';
+import { StarshipDTO } from '../../interfaces/dtos/starship-dto.interface';
 
 @Component({
   selector: 'starship-card',
@@ -12,7 +12,7 @@ import { Starship } from '../../interfaces/starship.interface';
 })
 export class StarshipCardComponent implements OnInit {
   @Input()
-  public starShip!: Starship;
+  public starShip!: StarshipDTO;
   public urlImage: string = '';
 
   constructor(private imageService: StarWarsImageService) {}

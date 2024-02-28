@@ -2,7 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, inject } from '@angular/core';
 import { map, switchMap, tap } from 'rxjs';
 import { StarWarsInfoService } from '../../services/star-wars-info.service';
-import { Starship } from '../../interfaces/starship.interface';
+import { StarshipDTO } from '../../interfaces/dtos/starship-dto.interface';
 import { StarshipImagePipe } from '../../pipes/starship-image.pipe';
 import { AsyncPipe } from '@angular/common';
 
@@ -18,7 +18,7 @@ export class StarShipPageComponent implements OnInit {
     private activatedRouter = inject(ActivatedRoute);
     private starwarsInfoService = inject(StarWarsInfoService);
 
-    public starship?: Starship;
+    public starship?: StarshipDTO;
     public starshipId: string = '';
 
     ngOnInit(): void {

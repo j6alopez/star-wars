@@ -1,18 +1,18 @@
 <ul class="list-group list-group-flush">
   @for (starship of starships; track $index) {
-  <a 
-    class="list-group-item"
-    [routerLink]="['/starships', getStarShipId(starship.url)]"  
-  >
-    <h5> {{ starship.model | uppercase }}</h5>
-    <p> {{ starship.name }} </p>
-
-  </a>
+    <a 
+      class="list-group-item"
+      [routerLink]="['/starships', getStarShipId(starship.url)]"  
+    >
+      <h5> {{ starship.model | uppercase }}</h5>
+      <p> {{ starship.name }} </p>
+    </a>
   }
 </ul>
 @if(nextPage !== null) {
   <button
     class="btn"
+    (click)="addStarShipsToList()"
   >
     View More
   </button>
