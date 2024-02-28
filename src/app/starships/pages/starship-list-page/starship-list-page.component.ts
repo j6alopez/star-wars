@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './starship-list-page.component.html',
   styleUrl: './starship-list-page.component.scss'
 })
-export default class StarShipPageComponent implements OnInit {
+export default class StarShipListPageComponent implements OnInit {
+
   public starships: Starship[] = [];
   private currentPage: number = 1;
   public nextPage!: number | null;
