@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './home/home-page/home-page.component';
-import LayoutPageComponent from './starships/pages/layout-page/layout-page.component';
 
 export const routes: Routes = [
   {
@@ -13,7 +12,7 @@ export const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/app.routes').then( r => r.AUTH_ROUTES)
+    loadChildren: () => import('./auth/auth.routes').then( r => r.AUTH_ROUTES)
   },
   {
     path: '',
