@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, inject } from '@angular/core';
 import { map, switchMap, tap } from 'rxjs';
 
+import { FilmCardComponent } from '../../../films/components/film-card/film-card.component';
+import { PeopleCardComponent } from '../../../people/people-card/people-card.component';
 import { StarshipCardComponent } from '../../components/starship-card/starship-card.component';
 import { StarshipDTO } from '../../interfaces/dtos/starship-dto.interface';
 import { StarshipImagePipe } from '../../pipes/starship-image.pipe';
@@ -15,6 +17,8 @@ import { StarWarsInfoService } from '../../../services/star-wars-info.service';
     styleUrl: './starship-page.component.scss',
     imports: [
         AsyncPipe,
+        FilmCardComponent,
+        PeopleCardComponent,
         StarshipCardComponent,
         StarshipImagePipe,
     ],

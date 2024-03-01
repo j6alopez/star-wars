@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-film-card',
+  selector: 'film-card',
   standalone: true,
   imports: [],
   templateUrl: './film-card.component.html',
