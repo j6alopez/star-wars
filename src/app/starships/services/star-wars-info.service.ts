@@ -11,7 +11,7 @@ export class StarWarsInfoService {
 
   constructor( private http: HttpClient) {}
 
-  private baseUrl = "https://swapi.dev/api"
+  private baseUrl = "https://swapi.dev/api";
 
   public getStarshipsWithPagination( page: number): Observable<StarshipsDTO> {
     const url = `${this.baseUrl}/starships/?page=${page} `

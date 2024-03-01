@@ -1,3 +1,29 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$XWTra9fMaJ3QxtHE8OJwIO.vLKqYDF1OjLJtiFC4KkzeJHDjtRKUa",
+      "id": 1
+    },
+    {
+      "email": "a@gmail.ccom",
+      "password": "$2a$10$i0LUbo50vnkairw1tMm4leJRe9Fi40NFqg4H4.HrB4eXRvdRJ7yBe",
+      "id": 2
+    },
+    {
+      "email": "a@gmail.ccoaam",
+      "password": "$2a$10$7eKaTfBVu6XO9.2zaZWvW.F5VUHCASiQb8vcIku/EKI7MQ5GgUffO",
+      "id": 3
+    },
+    {
+      "email": "abcdef@gmail.com",
+      "password": "$2a$10$qt5v2uJstGaq34D6k.Mo5OD89kpxYnp40j4Z3J0Vbs5xERidsl4uW",
+      "id": 4
+    },
+    {
+      "email": "hola@gmail.com",
+      "password": "$2a$10$QE7ZQbvfYJHrl6s3Rnp3luu7vfwwhz9XjvF79PhdIS6bXr7uwJ/qG",
+      "id": 5
+    }
+  ]
 }

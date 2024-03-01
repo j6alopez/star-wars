@@ -1,5 +1,21 @@
-<div class="container">
-  <div class="row">
-    <input class="form-control" type="text" placeholder="usuario">
-  </div>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <form class="row bg-light card login-card p-2" 
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+  >
+    <div class="card-body d-flex flex-column justify-content-center ">
+      <h2 class="card-title">Iniciar sesión</h2>
+      <p class="card-text">
+        Introduce tu email y contraseña
+      </p>
+      <input class="form-control my-2 field" type="email" placeholder="email"
+        formControlName = "email"
+      >
+      <input class="form-control my-2 field" type="password" placeholder="password"
+        formControlName = "password"
+      >
+      <button type="submit" class="btn text-dark fw-bold" id="login-button">Iniciar sesión</button>
+    </div>
+  </form>
 </div>
