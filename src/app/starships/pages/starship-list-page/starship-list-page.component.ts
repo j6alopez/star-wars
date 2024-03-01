@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Starship } from '../../interfaces/starship.interface';
-import { StarWarsInfoService } from '../../services/star-wars-info.service';
+import { StarWarsInfoService } from '../../../services/star-wars-info.service';
 import { UrlUtilsService } from '../../../utils/url-utils/url-utils.service';
 import { map, tap } from 'rxjs';
 import { RouterModule } from '@angular/router';

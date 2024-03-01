@@ -22,10 +22,8 @@ export class LoginPageComponent {
     });
 
     onSubmit() {
-        console.log('dentro');
         if( this.loginForm.invalid) return;
         
-        console.log('despur');
         const email = this.loginForm.controls['email'].value!;
         const password = this.loginForm.controls['password'].value!;
         this.authService.login(email, password).subscribe((loginSuccess) => {

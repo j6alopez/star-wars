@@ -4,7 +4,7 @@
     <img src="assets/logo.png" alt="Logo" height="80" width="185">
   </div>
 
-  <div class="col-5 d-flex justify-content-end">
+  <div class="col-3 d-flex justify-content-end align-items-center ">
     <button class="btn" 
       routerLink = '/auth/login'
     >
@@ -13,6 +13,11 @@
       routerLink = '/auth/register'
     >SIGN UP
     </button>
+  </div>
+  <div class="col-2">
+    @if (email) {
+      <p class="text-white ps-3 ">{{ email }}</p>
+    }
   </div>
 
 </div>

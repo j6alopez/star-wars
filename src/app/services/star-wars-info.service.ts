@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StarshipsDTO } from '../interfaces/dtos/starships-dto.interface';
+import { StarshipsDTO } from '../starships/interfaces/dtos/starships-dto.interface';
 import { Observable } from 'rxjs';
-import { StarshipDTO } from '../interfaces/dtos/starship-dto.interface';
+import { StarshipDTO } from '../starships/interfaces/dtos/starship-dto.interface';
+import { PeopleDTO } from '../starships/interfaces/dtos/people-dto.interface';
+import { FilmDTO } from '../starships/interfaces/dtos/film.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +23,14 @@ export class StarWarsInfoService {
   public getStarshipById( id: string): Observable<StarshipDTO> {
     const url = `${this.baseUrl}/starships/${id}`
     return this.http.get<StarshipDTO>(url);
+  }
+
+  public getPeople( url: string): Observable<PeopleDTO> {
+    return this.http.get<PeopleDTO>(url);
+  }
+
+  public getFilm( url: string): Observable<FilmDTO> {
+    return this.http.get<FilmDTO>(url);
   }
 
 }

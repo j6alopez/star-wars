@@ -1,29 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { StarWarsImageService } from '../../services/star-wars-image.service';
-import { UrlUtilsService } from '../../../utils/url-utils/url-utils.service';
-import { StarshipDTO } from '../../interfaces/dtos/starship-dto.interface';
+import { Component, Input } from '@angular/core';
+import { StarshipDTO as Starship } from '../../interfaces/dtos/starship-dto.interface';
+import { StarshipImagePipe } from '../../pipes/starship-image.pipe';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'starship-card',
   standalone: true,
-  imports: [],
+  imports: [ StarshipImagePipe, AsyncPipe],
   templateUrl: './starship-card.component.html',
   styleUrl: './starship-card.component.scss',
 })
-export class StarshipCardComponent implements OnInit {
+export class StarshipCardComponent {
   @Input()
-  public starShip!: StarshipDTO;
-  public urlImage: string = '';
-
-  constructor(private imageService: StarWarsImageService) {}
-
-  ngOnInit(): void {
-    if (!this.starShip) throw Error('Starship property is required');
-
-    const id: string | undefined = UrlUtilsService.extractStarShipIdFromSwApi(this.starShip.url);
-
-    if (id) {
-      this.urlImage = this.imageService.getStarshipImage(id);
-    }
-  }
+  public starship?: Starship;
+  @Input()
+  public starshipId?: string;
 }
