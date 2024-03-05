@@ -1,0 +1,8 @@
+button {
+    color: white;
+    background-color: transparent ! important;
+    &:hover {
+        color: white;
+        filter: invert(0.1);
+    }
+}

@@ -17,8 +17,8 @@ export class LoginPageComponent {
     private router = inject(Router);
 
     public loginForm = new FormGroup({
-        email: new FormControl('a@gmail.ccoaam', [ /*Validators.pattern(ValidationsService.emailPattern)*/]),
-        password: new FormControl('dfjljsdfjk', [ Validators.minLength(8)]),
+        email: new FormControl('aaa@gmail.com', [ /*Validators.pattern(ValidationsService.emailPattern)*/]),
+        password: new FormControl('aaa@gmail.com', [ Validators.minLength(8)]),
     });
 
     onSubmit() {
@@ -27,7 +27,6 @@ export class LoginPageComponent {
         const email = this.loginForm.controls['email'].value!;
         const password = this.loginForm.controls['password'].value!;
         this.authService.login(email, password).subscribe((loginSuccess) => {
-            console.log(loginSuccess)
             if ( loginSuccess) {
                 this.router.navigate(['./home']);
             }

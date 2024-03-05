@@ -1,14 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { AuthProfileComponent } from '../../../auth/components/auth-profile/auth-profile.component';
 
 @Component({
   selector: 'shared-banner',
   standalone: true,
-  imports: [RouterModule],
+  imports: [ AuthProfileComponent],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss'
 })
 export class BannerComponent {
-  @Input()
-  public email?: string;
 }

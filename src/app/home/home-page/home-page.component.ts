@@ -3,7 +3,6 @@ import { Router, RouterModule } from '@angular/router';
 
 import { NavigationBarComponent } from '../../shared/components/navigation-bar/navigation-bar.component';
 import { BannerComponent } from '../../shared/components/banner/banner.component';
-import { User } from '../../auth/interfaces/user';
 import { AuthService } from '../../auth/services/auth.service';
 
 @Component({

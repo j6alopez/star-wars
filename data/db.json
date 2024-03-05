@@ -24,6 +24,21 @@
       "email": "hola@gmail.com",
       "password": "$2a$10$QE7ZQbvfYJHrl6s3Rnp3luu7vfwwhz9XjvF79PhdIS6bXr7uwJ/qG",
       "id": 5
+    },
+    {
+      "email": "1354564dfsdf@gmail.com",
+      "password": "$2a$10$4SSwruAZ95kEM6g54lqEC.nWmOufvgTrJE3qxLsv2Dh5TqzJEZAg2",
+      "id": 6
+    },
+    {
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$5cngSP0QHKljgTWfyU4JaOjg1t/GrhyX.IW/urro/LNH3hkMDW95W",
+      "id": 7
+    },
+    {
+      "email": "aaaa@gmail.com",
+      "password": "$2a$10$6DNdkbS0exXZTCsQe1qkm.Ni9.Qc4SPAxlHotR5o67fQU5Y4Gh3c.",
+      "id": 8
     }
   ]
 }

@@ -1,0 +1,11 @@
+<div class="col-3 d-flex justify-content-end align-items-center">
+  <button class="btn" [routerLink]= "['/auth/login']">
+    LOG IN</button>
+  <button class="btn" [routerLink]= "['/auth/register']">SIGN UP
+  </button>
+</div>
+<div class="col-2 d-flex justify-content-end align-items-center">
+  @if (userEmail) {
+  <p class="text-white ps-3">{{ userEmail }}</p>
+  }
+</div>

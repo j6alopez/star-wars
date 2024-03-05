@@ -19,8 +19,8 @@ export class SignUpPageComponent {
     private router = inject(Router);
 
     public registerForm = new FormGroup({
-        email: new FormControl('', [Validators.pattern(ValidationsService.emailPattern)]),
-        password: new FormControl('', [Validators.minLength(8)]),
+        email: new FormControl('aaa@gmail.com', [Validators.pattern(ValidationsService.emailPattern)]),
+        password: new FormControl('aaa@gmail.com', [Validators.minLength(8)]),
     });
 
     onSubmit() {
@@ -35,6 +35,8 @@ export class SignUpPageComponent {
                 	this.router.navigate(['./auth', '/login']);
                 	return;
             	}
+            this.registerForm.setErrors({ 'customError': 'fsldfjlksdjflskdjf' });
+
         });
     }
 }
