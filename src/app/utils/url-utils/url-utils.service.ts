@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root',
 })
 export class UrlUtilsService {
-    public static extractStarShipIdFromSwApi(url: string): string {
+    public static extractIdFromSwApi(url: string): string {
         return url.split('/')
             .filter((segment) => segment !== '')
             .pop()!;

@@ -26,7 +26,7 @@ export default class StarShipListPageComponent implements OnInit {
   }
 
   getStarShipId(url: string): string {
-      return UrlUtilsService.extractStarShipIdFromSwApi(url);
+      return UrlUtilsService.extractIdFromSwApi(url);
   }
   
   addStarShipsToList(): void {

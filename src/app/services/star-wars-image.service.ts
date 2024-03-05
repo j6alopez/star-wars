@@ -21,7 +21,8 @@ export class StarWarsImageService {
   }
 
   public getCharacterImageById(id: string): Observable<string> {
-    const imageUrl: string = `${this.baseUrl}/assets/img/people/${id}.jpg`; 
+    const imageUrl: string = `${this.baseUrl}/assets/img/characters/${id}.jpg`; 
+    console.log('imagen:', imageUrl)
     return this.http.head(imageUrl).pipe(
       map(() => imageUrl), 
       catchError( () => of(this.noImageUrl) )

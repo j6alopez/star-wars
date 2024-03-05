@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { StarshipDTO } from '../starships/interfaces/dtos/starship-dto.interface';
 import { PeopleDTO } from '../starships/interfaces/dtos/people-dto.interface';
 import { FilmDTO } from '../starships/interfaces/dtos/film.dto';
+import { UrlUtilsService } from '../utils/url-utils/url-utils.service';
 
 @Injectable({
   providedIn: 'root',

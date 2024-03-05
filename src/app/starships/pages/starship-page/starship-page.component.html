@@ -3,11 +3,5 @@
 </section>
 
 <section>
-  <people-card [starship]="starship?.pilots" [starshipId]="starshipId"></people-card>
-</section>
-
-<section>
-  <hr>
-  <h2 class="my-2 text-white">PILOTS</h2>
-  <hr>  
+  <people-card [people]="starship!.pilots"></people-card>
 </section>

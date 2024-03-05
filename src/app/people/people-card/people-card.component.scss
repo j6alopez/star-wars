@@ -1,19 +1,19 @@
-h2,h5,p {
-    color: #7c7c7c
+h2,
+h5,
+p {
+  color: #7c7c7c;
 }
 
-hr {
-    color: white;
-}
+.people-card {
+  background-color: #212529;
+  border-radius: 5%;
 
-.starship-card {
-    background-color: #212529;
-    border-radius: 1%;
-    padding: 2%;
-}
+  > hr {
+    color: red;
+    border-width: 2px;
+  }
 
-.vertical-separator {
-    border-left: 1px solid red;
-    height: 100%; 
+  > img {
+    border-radius: 5%;
+  }
 }
-    
