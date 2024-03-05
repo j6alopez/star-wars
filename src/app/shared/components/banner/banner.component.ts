@@ -1,10 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { AuthProfileComponent } from '../../../auth/components/auth-profile/auth-profile.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'shared-banner',
   standalone: true,
-  imports: [ AuthProfileComponent],
+  imports: [],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss'
 })
