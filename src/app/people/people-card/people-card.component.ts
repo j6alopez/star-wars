@@ -1,16 +1,17 @@
+import { AsyncPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component, Input, OnInit, inject } from '@angular/core';
-import { StarWarsInfoService } from '../../services/star-wars-info.service';
+
 import { PeopleDTO } from '../../starships/interfaces/dtos/people-dto.interface';
-import { tap } from 'rxjs';
-import { AsyncPipe } from '@angular/common';
 import { PeopleImagePipe } from '../pipes/people-image.pipe';
+import { StarWarsInfoService } from '../../services/star-wars-info.service';
 
 @Component({
   selector: 'people-card',
   standalone: true,
   imports: [
     AsyncPipe,
-    PeopleImagePipe
+    PeopleImagePipe,
+    UpperCasePipe
    ],
   templateUrl: './people-card.component.html',
   styleUrl: './people-card.component.scss',

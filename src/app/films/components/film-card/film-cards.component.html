@@ -1,0 +1,13 @@
+<hr>
+<h2 class="my-2 text-white">FILMS</h2>
+<hr>
+<div class="d-flex">
+  @for (movie of movies; track $index) {
+  <div class="col-3 film-cards mx-2">
+    <img class="img-fluid" [src]="movie.url| filmImage | async" [alt]="movie.title">
+    <hr>
+    <p class="text-center ">{{ movie.title | uppercase  }}</p>
+    <p class="text-center"> Episode {{ movie.episode_id}}</p>
+  </div>
+  }
+</div>

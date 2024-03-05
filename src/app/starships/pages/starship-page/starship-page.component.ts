@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, inject } from '@angular/core';
 import { map, switchMap, tap } from 'rxjs';
 
-import { FilmCardComponent } from '../../../films/components/film-card/film-card.component';
+import { FilmCardComponent } from '../../../films/components/film-card/film-cards.component';
 import { PeopleCardComponent } from '../../../people/people-card/people-card.component';
 import { StarshipCardComponent } from '../../components/starship-card/starship-card.component';
 import { StarshipDTO } from '../../interfaces/dtos/starship-dto.interface';
