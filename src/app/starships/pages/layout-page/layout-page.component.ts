@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { AuthProfileComponent } from '../../../auth/components/auth-profile/auth-profile.component';
 import { BannerComponent } from '../../../shared/components/banner/banner.component';
 import { NavigationBarComponent } from '../../../shared/components/navigation-bar/navigation-bar.component';
 
@@ -11,6 +12,7 @@ import { NavigationBarComponent } from '../../../shared/components/navigation-ba
     selector: 'starship-layout-page',
     standalone: true,
     imports: [ 
+        AuthProfileComponent,
         BannerComponent,
         CommonModule, 
         NavigationBarComponent,

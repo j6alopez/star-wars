@@ -1,11 +1,17 @@
-<div class="row d-flex align-items-center">
+<div class="row">
   <div class="col-10 d-flex justify-content-end">
-    <button class="btn" [routerLink]="['/auth/login']">LOG IN</button>
-    <button class="btn" [routerLink]="['/auth/register']">SIGN UP </button>
+    @if (!userEmail) {
+      <button class="btn" [routerLink]="['/auth/login']">LOG IN</button>
+      <button class="btn" [routerLink]="['/auth/register']">SIGN UP </button>
+    }
+    @else {
+      <button class="btn" (click)="onLogout()">SIGN OUT</button>
+    }
   </div>
-  @if (!userEmail) {
+
+  @if (userEmail) {
     <div class="col-2 d-flex justify-content-end align-items-center">
-      <span class="text-white">kfhkjsdhgmail.com</span>
+      <span class="text-white">{{ userEmail }}</span>
     </div>
   }
 </div>

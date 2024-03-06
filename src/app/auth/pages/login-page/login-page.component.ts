@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ValidationsService } from '../../../validations/validations.service';
 import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-login-page',
@@ -14,7 +14,9 @@ import { Router } from '@angular/router';
 export class LoginPageComponent {
 
     private authService = inject(AuthService);
+    private activatedRoute = inject(ActivatedRoute);
     private router = inject(Router);
+
 
     public loginForm = new FormGroup({
         email: new FormControl('aaa@gmail.com', [ /*Validators.pattern(ValidationsService.emailPattern)*/]),
@@ -28,7 +30,8 @@ export class LoginPageComponent {
         const password = this.loginForm.controls['password'].value!;
         this.authService.login(email, password).subscribe((loginSuccess) => {
             if ( loginSuccess) {
-                this.router.navigate(['./home']);
+                const url = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/home';
+                this.router.navigateByUrl(url);
             }
         });
     }

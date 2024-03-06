@@ -19,16 +19,4 @@ import { AuthProfileComponent } from '../../auth/components/auth-profile/auth-pr
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  
-  private authService = inject(AuthService);
-  private router = inject(Router);
-
-  get userEmail(): string | undefined {
-    return this.authService.currentUser?.email;
-  }
-
-  onLogout() {
-    this.authService.logout();
-    this.router.navigate(['/auth/login'])
-  }
 }
