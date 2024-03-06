@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
 import { StarWarsInfoService } from './star-wars-info.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('StarshipsService', () => {
+describe('StarWars Info Service', () => {
   let service: StarWarsInfoService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [StarWarsInfoService]
+    });
     service = TestBed.inject(StarWarsInfoService);
   });
 
