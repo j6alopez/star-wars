@@ -19,8 +19,8 @@ export class LoginPageComponent {
 
 
     public loginForm = new FormGroup({
-        email: new FormControl('aaa@gmail.com', [ /*Validators.pattern(ValidationsService.emailPattern)*/]),
-        password: new FormControl('aaa@gmail.com', [ Validators.minLength(8)]),
+        email: new FormControl('', [ Validators.pattern(ValidationsService.emailPattern)]),
+        password: new FormControl('', [ Validators.minLength(8)]),
     });
 
     onSubmit() {
