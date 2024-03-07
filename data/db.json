@@ -1,49 +1,9 @@
 {
   "users": [
     {
-      "email": "a@gmail.com",
-      "password": "$2a$10$XWTra9fMaJ3QxtHE8OJwIO.vLKqYDF1OjLJtiFC4KkzeJHDjtRKUa",
-      "id": 1
-    },
-    {
-      "email": "a@gmail.ccom",
-      "password": "$2a$10$i0LUbo50vnkairw1tMm4leJRe9Fi40NFqg4H4.HrB4eXRvdRJ7yBe",
-      "id": 2
-    },
-    {
-      "email": "a@gmail.ccoaam",
-      "password": "$2a$10$7eKaTfBVu6XO9.2zaZWvW.F5VUHCASiQb8vcIku/EKI7MQ5GgUffO",
-      "id": 3
-    },
-    {
-      "email": "abcdef@gmail.com",
-      "password": "$2a$10$qt5v2uJstGaq34D6k.Mo5OD89kpxYnp40j4Z3J0Vbs5xERidsl4uW",
-      "id": 4
-    },
-    {
-      "email": "hola@gmail.com",
-      "password": "$2a$10$QE7ZQbvfYJHrl6s3Rnp3luu7vfwwhz9XjvF79PhdIS6bXr7uwJ/qG",
-      "id": 5
-    },
-    {
-      "email": "1354564dfsdf@gmail.com",
-      "password": "$2a$10$4SSwruAZ95kEM6g54lqEC.nWmOufvgTrJE3qxLsv2Dh5TqzJEZAg2",
-      "id": 6
-    },
-    {
       "email": "aaa@gmail.com",
-      "password": "$2a$10$5cngSP0QHKljgTWfyU4JaOjg1t/GrhyX.IW/urro/LNH3hkMDW95W",
-      "id": 7
-    },
-    {
-      "email": "aaaa@gmail.com",
-      "password": "$2a$10$6DNdkbS0exXZTCsQe1qkm.Ni9.Qc4SPAxlHotR5o67fQU5Y4Gh3c.",
-      "id": 8
-    },
-    {
-      "email": "aaaaaaaaaaaaa@gmail.com",
-      "password": "$2a$10$kY2WwkY0cOGRFlLyamVtauJ7VITVKI/eTeK14OFiwGsS2gbGonujq",
-      "id": 9
+      "password": "$2a$10$Wb88R9Z6LO3fx89ZbB0LnOEBmev8NdKk4ZA8IGRefye9f2.PDlKVi",
+      "id": 1
     }
   ]
 }

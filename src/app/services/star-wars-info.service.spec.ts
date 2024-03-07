@@ -3,13 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { StarWarsInfoService } from './star-wars-info.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('StarWars Info Service', () => {
+
+describe('StarWarsInfoService', () => {
   let service: StarWarsInfoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [StarWarsInfoService]
+      providers: [StarWarsInfoService],
     });
     service = TestBed.inject(StarWarsInfoService);
   });
@@ -17,4 +18,5 @@ describe('StarWars Info Service', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
 });

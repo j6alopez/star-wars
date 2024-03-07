@@ -36,7 +36,6 @@ export class AuthService {
     const url: string = `${this.baseUrl}/login`;
     return this.http.post<AuthResponseDTO>( url, { email, password })
       .pipe(
-        tap( a => console.log('aqui')),
           map( ({ user }) => ({ email: user.email } as User )),
           tap( user => this.user = user ),
           map( user => !!user),
