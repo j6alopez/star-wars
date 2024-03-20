@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
-  <form class="row bg-light card login-card p-2" 
+  <form class="row bg-light card login-card p-2"
     [formGroup]="loginForm"
     (ngSubmit)="onSubmit()"
     autocomplete="off"
@@ -12,10 +12,25 @@
       <input class="form-control my-2 field" type="email" placeholder="email"
         formControlName = "email"
       >
+      @if ( loginForm.touched && loginForm.invalid ) {
+        <div>
+          <p class="text-danger text-center"> <small>{{ getFieldError('email')}}</small></p>
+        </div>
+      }
       <input class="form-control my-2 field" type="password" placeholder="password"
         formControlName = "password"
       >
+      @if ( loginForm.touched && loginForm.invalid ) {
+        <div>
+          <p class="text-danger text-center"> <small>{{ getFieldError('password')}}</small></p>
+        </div>
+      }
       <button type="submit" class="btn text-dark fw-bold" id="login-button">Iniciar sesión</button>
+      @if ( loginForm.touched && loginForm.invalid ) {
+        <div>
+          <p class="text-danger text-center mt-3"> {{ isLoginFailed() }}</p>
+        </div>
+      }
     </div>
   </form>
 </div>

@@ -21,11 +21,9 @@ export class SignUpPageComponent {
   private router = inject(Router);
 
   public registerForm = new FormGroup({
-    email: new FormControl('aaa@gmail.com', [Validators.required, Validators.pattern(ValidationsService.emailPattern)]),
-    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    email: new FormControl('test@gmail.com', [Validators.required, Validators.pattern(ValidationsService.emailPattern)]),
+    password: new FormControl('test@gmail.com', [Validators.required, Validators.minLength(8)]),
   });
-
-  public feedbackMessage?: string | null;
 
   onSubmit() {
     if (this.registerForm.invalid) {
@@ -36,8 +34,7 @@ export class SignUpPageComponent {
     const email = this.registerForm.controls['email'].value!;
     const password = this.registerForm.controls['password'].value!;
 
-    this.authService.createUser(email, password)
-      .subscribe((isCreated) => {
+    this.authService.createUser(email, password).subscribe((isCreated) => {
         if (isCreated) {
           this.router.navigate(['./auth', '/login']);
           return;
@@ -67,7 +64,7 @@ export class SignUpPageComponent {
     return null;
   }
 
-  isUserAlreadyRegistered() : string | null {
+  isUserAlreadyRegistered(): string | null {
     return this.registerForm.getError('customError');
   }
 
