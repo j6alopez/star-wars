@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
-    <form class="row bg-light card login-card p-2" 
+    <form class="row bg-light card login-card p-2"
       [formGroup]="registerForm"
       (ngSubmit)="onSubmit()"
       autocomplete="off"
@@ -12,13 +12,24 @@
         <input class="form-control my-2 field" type="email" placeholder="email"
           formControlName = "email"
         >
+        @if ( registerForm.touched && registerForm.invalid ) {
+          <div>
+            <p class="text-danger text-center"> <small>{{ getFieldError('email')}}</small></p>
+          </div>
+        }
+
         <input class="form-control my-2 field" type="password" placeholder="password"
           formControlName = "password"
         >
-        <button type="submit" class="btn text-dark fw-bold" id="register-button">Registrarse</button>
-        @if (registerForm.invalid) {
+        @if ( registerForm.touched && registerForm.invalid ) {
           <div>
-            <p class="text-danger text-center mt-3"> User is already registered</p>
+            <p class="text-danger text-center"> <small>{{ getFieldError('password')}}</small></p>
+          </div>
+        }
+        <button type="submit" class="btn text-dark fw-bold" id="register-button">Registrarse</button>
+        @if ( registerForm.touched && registerForm.invalid ) {
+          <div>
+            <p class="text-danger text-center mt-3"> {{ isUserAlreadyRegistered() }}</p>
           </div>
         }
       </div>
